@@ -3,6 +3,22 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+
+    '''
+    This function creates the DataFrame that will be used.
+
+    input:
+    messages_filepath: name of the csv file with the messeges 
+                       to be classified. Must include the path
+                       if not in the same folder.
+    categories_filepath: name of the cvs files with the labels
+                         for each message. Must include the path 
+                         if not in the same folder.
+
+    output:
+    df: Pandas DataFrame with messages and categories merged.
+    '''
+
     messages = pd.read_csv('{}'.format(messages_filepath))
     categories = pd.read_csv('{}'.format(categories_filepath))
     df = messages.merge(categories, on='id')
@@ -10,6 +26,21 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+
+    '''
+    This function cleans the DataFrame: 
+    a) splits categories into separate columns
+    b) renames de columns and assign the correct value (0 or 1)
+    c) creates a DataFrame with the messages and this new columns
+    d) drops duplicates.
+
+    input:
+    df: Pandas DataFrame.
+    
+    output:
+    df: cleaned Pandas DataFrame.
+    '''
+
     categories = df.categories.str.split(';', expand=True)
     row = categories.iloc[0]
     category_colnames = row.apply(lambda x: x[:-2])
@@ -23,12 +54,30 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    
+    '''
+    This function saves de cleaned DataFrame to a SQL database.
+
+    input:
+    df: cleaned Pandas DataFrame.
+    database_filenameL: name of the SQL database where the DataFrame
+                        is going to be saved. Must include the path 
+                        if not in folder.
+
+    output: None
+    '''
+
     engine = create_engine('sqlite:///{}'.format(database_filename))
     df.to_sql('MessagesLabeled', engine, index=False)
     pass  
 
 
 def main():
+
+    '''
+    This function reads the three filepaths needed and runs the other functions
+    '''
+
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
