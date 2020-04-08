@@ -7,7 +7,7 @@ This project is part of the Udacity's Data Scientist Nanodegree.
 The goal of this project is to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages. 
 
 
-### Instructions:
+### Instructions
 
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -21,22 +21,31 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
 
 3. Go to http://0.0.0.0:3001/
 
-### Files:
+### Files
 
 data:
+
 process_data.py: python script that reads two csv files (the messages file and the categories files) and creates a SQL
                  database with a cleaned table.
+
 disaster_messages.csv: csv file with the messages.
+
 disaster_categories.csv: csv table with the categories for each message.
+
 DisasterResponse.db: output of the process_data.py, you don't need this file to run the API.
 
 models:
+
 train_classifier.py: python script that reads the SQL database and creates and trains a classifier, and stores it in
                      a pickle file.
                      
 app:
+
 run.py: python scripts that runs the app.
+
 templates:
-          go.html:
-          master.html:
+
+            go.html:
+
+            master.html:
 
