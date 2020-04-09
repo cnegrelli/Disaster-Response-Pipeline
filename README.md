@@ -48,9 +48,7 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
                      
 - app/run.py: python scripts that runs the app.
 
-- app/templates/go.html:
-
-- app/templates/master.html:
+- app/templates/* : templates for the app.
 
 ### License
 
