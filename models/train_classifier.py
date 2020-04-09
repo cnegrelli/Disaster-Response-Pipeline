@@ -12,7 +12,7 @@ from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report
-from sklearn.externals import joblib 
+import pickle
 
 
 def load_data(database_filepath):
@@ -123,7 +123,7 @@ def save_model(model, model_filepath):
     output: None
     '''
 
-    joblib.dump(model, '{}'.format(model_filepath))
+    pickle.dump(model, open(model_filepath, 'wb'))
 
 
 def main():
