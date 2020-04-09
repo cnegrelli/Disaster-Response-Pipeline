@@ -6,6 +6,14 @@ This project is part of the Udacity's Data Scientist Nanodegree.
 
 The goal of this project is to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages. 
 
+### Python libraries
+
+- sys
+- pandas
+- nltk
+- sqlalchemy
+- sklearn
+
 
 ### Instructions
 
