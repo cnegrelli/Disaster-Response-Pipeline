@@ -13,6 +13,7 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
 - nltk
 - sqlalchemy
 - sklearn
+- pickle
 
 
 ### Instructions
@@ -38,6 +39,7 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
 ![ ](https://github.com/cnegrelli/Disaster-Response-Pipeline/blob/master/Screenshot1.png)
 
 2) The categories assigned to your message will appear highlighted:
+![ ](https://github.com/cnegrelli/Disaster-Response-Pipeline/blob/master/Screenshot2.png)
 
 
 ### Files
