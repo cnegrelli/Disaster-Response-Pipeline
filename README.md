@@ -41,3 +41,11 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
 
 - app/templates/master.html:
 
+### License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+### Acknowledgements
+
+- [Udacity](https://www.udacity.com/): for the idea and the starter code.
+- [Figure Eight](https://www.figure-eight.com/): for the labeled data set.
