@@ -23,7 +23,7 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
 
 ### Files
 
-data:
+- data:
 
 process_data.py: python script that reads two csv files (the messages file and the categories files) and creates a SQL
                  database with a cleaned table.
@@ -34,18 +34,18 @@ disaster_categories.csv: csv table with the categories for each message.
 
 DisasterResponse.db: output of the process_data.py, you don't need this file to run the API.
 
-models:
+- models:
 
 train_classifier.py: python script that reads the SQL database and creates and trains a classifier, and stores it in
                      a pickle file.
                      
-app:
+- app:
 
 run.py: python scripts that runs the app.
 
 templates:
 
-            go.html:
+   go.html:
 
-            master.html:
+   master.html:
 
