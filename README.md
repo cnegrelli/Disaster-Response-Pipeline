@@ -33,7 +33,7 @@ The goal of this project is to analyze disaster data from Figure Eight to build 
 
 3. Go to http://0.0.0.0:3001/
 
-### Web app instructions
+##### Web app instructions
 
 1) You have to enter your messsage in the appropriate box:
 ![ ](https://github.com/cnegrelli/Disaster-Response-Pipeline/blob/master/Screenshot1.png)
